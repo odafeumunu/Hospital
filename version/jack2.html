@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Jack- Page 2 - Health Medics</title>
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+
+      <!-- Stylesheets
+    ================================================== -->
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
+    <!-- Font Awesome core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon-logo.png">
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body>
+
+    <!-- header start -->
+    <header>
+        <!-- intro start -->
+        <div class="intro">
+            <div class="container">
+                
+                <div class="row">
+                    <div class="intro1 col-md-8">
+                        <div class="days">
+                            <p><i class="fas fa-clock"></i></p>
+                            <p>Opening Hours : Monday to Saturday - 8am to 9pm</p>
+                        </div>
+                    </div>
+        
+                    <div class="intro2 col-md-4">
+                        <div class="search">
+                            <input type="text" placeholder="type your search here">
+                            <span><i class="fas fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- intro end -->
+
+        <!-- navbar start -->
+        <nav class="nav">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="../images/logo.png" alt="">
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="drop"><a href="doctor.html">Doctors</a>
+
+                        <div class="drop-menu">
+                            <ul>
+                                <a href="4-columns-doctors.html"><li>4 Columns Doctors</li></a>
+                                <a href="3-columns-doctors.html"><li>3 Columns Doctors</li></a>
+                                <a href="2-columns-doctors.html"><li>2 Columns Doctors</li></a>
+                            </ul>
+                        </div>
+                    
+                    </li>
+
+                    <li class="active"><a href="news.html">News</a></li>
+
+                    <li class="drop"><a href="service.html">Services</a>
+
+                        <div class="drop-menu">
+                            <ul>
+                                <a href="3-columns-services.html"><li>3 Columns Services</li></a>
+                                <a href="2-columns-services.html"><li>2 Columns Services</li></a>
+                                <a href="1-column-services.html"><li>1 Column Services</li></a>
+                            </ul>
+                        </div>
+                    
+                    </li>
+
+                    <li><a href="shop.html">Shop</a></li>
+
+                    <li class="drop"><a href="gallery.html">Gallery</a>
+
+                        <div class="drop-menu">
+                            <ul>
+                                <a href="4-columns-gallery.html"><li>4 Columns Gallery</li></a>
+                                <a href="3-columns-gallery.html"><li>3 Columns Gallery</li></a>
+                                <a href="2-columns-gallery.html"><li>2 Columns Gallery</li></a>
+                            </ul>
+                        </div>
+                    
+                    
+                    </li>                    
+                    <li class="drop"><a href="#">Pages</a>
+
+                        <div class="drop-menu">
+                            <ul>
+                                <a href="appointment.html"><li>Appointment</li></a>
+                                <a href="faq.html"><li>Faqs</li></a>
+                                <a href="faqwidth.html"><li>Full width faqs</li></a>
+                                <a href="shortcode.html"><li>Shortcodes</li></a>
+                                <a href="columns.html"><li>Column</li></a>
+                                <a href="sample.html"><li>Sample page</li></a>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+
+                <div class="toggle-bar">
+                    <div class="toggle" id="tog1"></div>
+                    <div class="toggle" id="tog2"></div>
+                    <div class="toggle" id="tog3"></div>
+                    <div class="overlap" id="ov1" onclick="openSide()"></div>
+                    <div class="overlap1" id="ov2" onclick="closeSide()"></div>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar end -->
+
+        <!-- dark start -->
+        <div id="dark" onclick="closeSide()"></div>
+        <!-- dark end -->
+
+        <!-- Sidebar start -->
+        <div class="sidebar" id="sidebar">
+            <div class="topp">
+                <p>Monday to Saturday - 8am to 9pm</p>
+                <div class="search">
+                    <input type="text" placeholder="type your search here">
+                    <span><i class="fas fa-search"></i></span>
+                </div>
+                <h2>MENU</h2>
+            </div>
+            <ul>
+                <a href="index.html"><li>Home</li></a>
+                <div class="side-open">
+                    <div class="drop"><a href="doctor.html"><li>Doctors</li></a>
+                        <p onclick="openSideDrop()" id="onep">&plus;</p>
+                        <p onclick="closeSideDrop()" id="twop" style="display: none;">&minus;</p>
+                    </div>
+                    <div class="side-drop" id="sidedrop">
+                        <ul>
+                            <a href="4-columns-doctors.html"><li>4 Columns Doctors</li></a>
+                            <a href="3-columns-doctors.html"><li>3 Columns Doctors</li></a>
+                            <a href="2-columns-doctors.html"><li>2 Columns Doctors</li></a>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="news.html"><li>News</li></a>
+
+                <div class="side-open">
+                    <div class="drop"><a href="service.html"><li>Services</li></a>
+                        <p onclick="openSideDrop1()" id="onep1">&plus;</p>
+                        <p onclick="closeSideDrop1()" id="twop1" style="display: none;">&minus;</p>
+                    </div>
+                    <div class="side-drop" id="sidedrop1">
+                        <ul>
+                            <a href="3-columns-services.html"><li>3 Columns Services</li></a>
+                            <a href="2-columns-services.html"><li>2 Columns Services</li></a>
+                            <a href="1-column-services.html"><li>1 Column Services</li></a>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="shop.html"><li>Shop</li></a>
+
+                <div class="side-open">
+                    <div class="drop"><a href="gallery.html"><li>Gallery</li></a>
+                        <p onclick="openSideDrop2()" id="onep2">&plus;</p>
+                        <p onclick="closeSideDrop2()" id="twop2" style="display: none;">&minus;</p>
+                    </div>
+                    <div class="side-drop" id="sidedrop2">
+                        <ul>
+                            <a href="4-columns-gallery.html"><li>4 Columns Gallery</li></a>
+                            <a href="3-columns-gallery.html"><li>3 Columns Gallery</li></a>
+                            <a href="2-columns-gallery.html"><li>2 Columns Gallery</li></a>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="side-open">
+                    <div class="drop yes"><a href="#"><li>Pages</li></a>
+                        <p onclick="openSideDrop3()" id="onep3">&plus;</p>
+                        <p onclick="closeSideDrop3()" id="twop3" style="display: none;">&minus;</p>
+                    </div>
+                    <div class="side-drop" id="sidedrop3">
+                        <ul>
+                            <a href="appointment.html"><li>Appointment</li></a>
+                            <a href="faq.html"><li>Faqs</li></a>
+                            <a href="faqwidth.html"><li>Full width faqs</li></a>
+                            <a href="shortcode.html"><li>Shortcodes</li></a>
+                            <a href="columns.html"><li>Column</li></a>
+                            <a href="sample.html"><li>Sample page</li></a>
+                        </ul>
+                    </div>
+                </div>
+                
+                <a href="contact.html"><li>Contact</li></a>
+            </ul>
+        </div>
+        <!-- Sidebar end -->
+
+
+
+
+
+        <!-- jack-1 start -->
+        <div class="jack-1">
+            <div class="container">
+                <h2>Jack</h2>       
+                <p><a href="index.html">Health Medic</a><i class="fas fa-chevron-right"></i> <span>Author</span></p>
+            </div>
+        </div>
+        <!-- jack-1 end -->
+
+        <!-- jack-2 start -->
+        <div class="jack-2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-xl-9 col-lg-8">
+
+                        <!-- content -->
+                        <div class="content">
+
+                            <div class="date">
+                                <h2 class="text-center">MAY<br><span>06</span></h2>
+                                <p class="text-center"><a href="healthier.html#respond"><i class="fas fa-comment-dots"></i><span>0</span></a></p>
+                            </div>
+                            <div class="inner-content">
+                                <div class="small-date">
+                                    <h3>May 06</h3>
+                                </div>
+                                <div class="content-1">
+                                    <div class="red1-bg">
+                                        <div class="image">
+                                            <img src="../images/link-format-bg.png">
+                                        </div>
+                                        <div class="text">
+                                            <h2>How to Live a Healthier Life</h2>
+                                            <a href="http://www.wikihow.com/Live-a-Healthier-Life"><p>http://www.wikihow.com/Live-a-Healthier-Life</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        <!-- content end -->
+
+                        <!-- content -->
+                        <div class="content">
+
+                            <div class="date">
+                                <h2 class="text-center">MAY<br><span>07</span></h2>
+                                <p class="text-center"><a href="hero.html#respond"><i class="fas fa-comment-dots"></i><span>0</span></a></p>
+                            </div>
+                            <div class="inner-content">
+                                <div class="small-date">
+                                    <h3>May 07</h3>
+                                </div>
+                                <iframe class="img-responsive w-100" height="400" src="https://www.youtube.com/embed/il_93l4wj_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <a href="hero.html"><h2>The Hero In All Of Us</h2></a>
+                                <p>Posted by <a href="jack.html">Jack</a></p>
+
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo...</p>
+
+                                <a href="hero.html"><button>Read more</button></a>
+                            </div>
+                            
+                        </div>
+                        <!-- content end -->
+
+                        <!-- content -->
+                        <div class="content">
+
+                            <div class="date">
+                                <h2 class="text-center">MAY<br><span>06</span></h2>
+                                <p class="text-center"><a href="audio.html#respond"><i class="fas fa-comment-dots"></i><span>0</span></a></p>
+                            </div>
+                            <div class="inner-content">
+                                <div class="small-date">
+                                    <h3>May 06</h3>
+                                </div>
+                                <div class="audio">
+                                    <audio controls class="w-100">
+                                        <source src="../audios/Krik-Fanklin-I-Smile.mp3">
+                                    </audio>
+                                </div>
+                                <a href="audio.html"><h2>Audio Post Format</h2></a>
+                                <p>Posted by <a href="">Jack</a></p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo...</p>
+                                <a href="audio.html">
+                                    <button>Read more</button>
+                                </a>
+                            </div>
+                            
+                        </div>
+                        <!-- content end -->
+
+                        <!-- content -->
+                        <div class="content">
+
+                            <div class="date">
+                                <h2 class="text-center">MAY<br><span>06</span></h2>
+                                <p class="text-center"><a href="standardP.html#respond"><i class="fas fa-comment-dots"></i><span>0</span></a></p>
+                            </div>
+                            <div class="inner-content">
+                                <div class="small-date">
+                                    <h3>May 06</h3>
+                                </div>
+                                <div class="content-1">
+                                    <a href="standardP.html"><img src="../images/news-1.jpg" class="img-responsive w-100"></a>
+                                    <a href="standardP.html"><h2>Standard Post Format with Featured Image</h2></a>
+                                    <p>Posted by <a href="">Jack</a></p>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo...</p>
+                                </div>
+                                <a href="standardP.html">
+                                    <button>Read more</button>
+                                </a>
+
+                            </div>
+                            
+                        </div>
+                        <!-- content end -->
+
+                        
+                        <!-- next page start -->
+                        <div class="next-page text-center">
+                            <a href="jack.html"><li>&LeftArrow;</li></a>
+                            <a href="jack.html"><li>1</li></a>
+                            <a class="active"><li>2</li></a>
+                        </div>
+                        <!-- next page end -->
+
+                    </div>
+
+                    
+
+                    <div class="col-xl-3 col-lg-4">
+                        <!-- cont start -->
+                        <div class="cont">
+
+                            <div class="head">
+                                <li class="active" onclick="showNews1()" id="pop">Popular</li>
+                                <li onclick="showNews2()" id="lat">Latest</li>
+                                <li onclick="showNews3()" id="com">Comment</li>  
+                            </div>
+
+                            <div class="news-cont">
+
+                                <div class="news-con-1" id="show1">
+                                    <div class="news-cont1">
+                                        <a href="imageP.html"><img src="../images/news-2-150x150.jpg"></a>
+                                        <div class="text">
+                                            <a href="imageP.html"><h2>Image Post Format</h2></a>
+                                            <p>May 20, 2014</p>
+                                        </div>
+                                    </div>
+    
+                                    <div class="news-cont1">
+                                        <a href="standardP.html"><img src="../images/news-1-150x150.jpg"></a>
+                                        <div class="text">
+                                            <a href="standardP.html"><h2>Standard Post Format with Featured Image</h2></a>
+                                            <p>May 20, 2014</p>
+                                        </div>
+                                    </div>
+    
+                                    <div class="news-cont1">
+                                        <a href="galleryP.html"><img src="../images/gallery-1-150x150.jpg"></a>
+                                        <div class="text">
+                                            <a href="galleryP.html"><h2>Gallery Post Format</h2></a>
+                                            <p>May 20, 2014</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="news-con-1" id="show2">
+                                    <div class="news-cont1">
+                                        <a href="we-make.html"><img src="../images/gallery-7-150x150.jpg"></a>
+                                        <div class="text">
+                                            <a href="we-make.html"><h2>We make you smile each time without any pain</h2></a>
+                                            <p>May 20, 2018</p>
+                                        </div>
+                                    </div>
+    
+                                    <div class="news-cont1">
+                                        <a href="dental.html"><img src="../images/service-4-150x150.jpg"></a>
+                                        <div class="text">
+                                            <a href="dental.html"><h2>Dental Implants are easier now</h2></a>
+                                            <p>May 20, 2018</p>
+                                        </div>
+                                    </div>
+    
+                                    <div class="news-cont1">
+                                        <a href="imageP.html"><img src="../images/news-2-150x150.jpg"></a>
+                                        <div class="text">
+                                            <a href="imageP.html"><h2>Image Post Format</h2></a>
+                                            <p>May 20, 2014</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="news-con-1" id="show3">
+                                    <div class="news-cont1">
+                                        <a href="imageP.html"><img src="../images/imP1.jpeg"></a>
+                                        <div class="text">
+                                            <a href="imageP.html"><h2>Image Post Format</h2></a>
+                                            <p>Ut wisi enim ad…</p>
+                                        </div>
+                                    </div>
+    
+                                    <div class="news-cont1">
+                                        <a href="imageP.html"><img src="../images/imP2.jpeg"></a>
+                                        <div class="text">
+                                            <a href="imageP.html"><h2>Image Post Format</h2></a>
+                                            <p>Lorem ipsum dolor sit…</p>
+                                        </div>
+                                    </div>
+    
+                                    <div class="news-cont1">
+                                        <a href="imageP.html"><img src="../images/imP3.jpeg"></a>
+                                        <div class="text">
+                                            <a href="imageP.html"><h2>Image Post Format</h2></a>
+                                            <p>Typi non habent claritatem…</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>                            
+                        </div>
+                        <!-- cont end -->
+
+                        <!-- category start -->
+                        <div class="category">
+                            <h2>Categories</h2>
+                            <p><a href="environment.html">Environment</a></p>
+                            <p><a href="healthB.html">Health Basics</a></p>
+                            <p><a href="lifestyle.html">Lifestyle</a></p>
+                            <p><a href="motivate.html">Motivation</a></p>
+                        </div>
+                        <!-- category end -->
+
+                        <!-- tag start -->
+                        <div class="tag">
+                            <h2>Tags</h2>
+                            <a href="benefit.html"><li>Benefits</li></a>            
+                            <a href="bloodP.html"><li>Blood Pressure</li></a>
+                            <a href="body.html"><li>Body</li></a> 
+                            <a href="caring.html"><li>Caring Others</li></a>
+                            <a href="clean.html"><li>Clean Environment</li></a>
+                            <a href="doing.html"><li>Doing Good</li></a>
+                            <a href="friendly.html"><li>Friendly Staff</li></a>
+                            <a href="habit.html"><li>Habit</li></a>
+                            <a href="health.html"><li>Health</li></a>
+                            <a href="inspiring.html"><li>Inspiring</li></a>
+                            <a href="kids.html"><li>Kids Health</li></a>
+                            <a href="learning.html"><li>Learning</li></a>
+                            <a href="tips.html"><li>Tips</li></a>
+                            <a href="willpower.html"><li>Willpower</li></a>
+                        </div>
+                        <!-- tag end -->
+
+                        <!-- archive start -->
+                        <div class="archive">
+                            <h2>Archives</h2>
+                            <p><a href="may2018.html">May 2018</a></p>
+                            <p><a href="may2014.html">May 2014</a></p>
+                        </div>
+                        <!-- archive end -->
+
+
+                        <!-- recent start -->
+                        <div class="recent">
+                            <h2>Recent Posts</h2>
+                            <p><a href="we-make.html">We make you smile each time without any pain</a></p>
+                            <p><a href="dental.html">Dental Implants are easier now</a></p>
+                            <p><a href="imageP.html">Image Post Format</a></p>
+                            <p><a href="quote.html">Quote Post Format</a></p>
+                            <p><a href="galleryP.html">Gallery Post Format</a></p>
+                        </div>
+                        <!-- recent end -->
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        
+        <!-- jack-2 end -->
+
+
+
+
+        <!-- container-6 start -->
+        <div class="container-6">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6">
+                        <img src="../images/icon-pin-2.png">
+                        <p>121 King Street, Melbourne <br> Victoria 3000 Australia</p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <img src="../images/icon-phone-2.png">
+                        <p>Call Us Now at <br> +1-800-654-3210</p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <img src="../images/icon-mail.png">
+                        <p>Email Us at <br> info@yourwebsite.com</p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <img src="../images/icon-calendar-2.png">
+                        <a href="appointment.html"><p>Book Online <br> Appointment Now</p></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- container-6 end -->
+
+        <!-- footer start -->
+        <footer>
+
+            <div class="footer-1">
+                <div class="container">
+                    <div class="row">
+    
+                        <div class="col-lg-3 col-md-6">
+                            <h2>About MedicalPress</h2>
+                            <p>Lorem ipsum dolor sit amet, conse ctetuer adipiscing elit, sed diamno nummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <br> <br> Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                        </div>
+    
+                        <div class="col-lg-3 col-md-6">
+                            <h2>Recent Posts</h2>
+                                <a href="we-make.html"><p><i class="far fa-check-circle"></i>We make you smile each time without any pain</p></a>
+                                <a href="dental.html"><p><i class="far fa-check-circle"></i>Dental Implants are easier now</p></a>
+                                <a href="imageP.html"><p><i class="far fa-check-circle"></i>Image Post Format</p></a>
+                                <a href="quote.html"><p><i class="far fa-check-circle"></i>Quote Post Format</p></a>
+                        </div>
+    
+                        <div class="col-lg-3 col-md-6">
+                            <h2>Categories</h2>
+                             <a href="environment.html"><p><i class="far fa-check-circle"></i>Environment (2)</p></a>
+                             <a href="healthB.html"><p><i class="far fa-check-circle"></i>Health Basics (2)</p></a>
+                             <a href="lifestyle.html"><p><i class="far fa-check-circle"></i>Lifestyle (2)</p></a>
+                             <a href="motivate.html"><p><i class="far fa-check-circle"></i>Motivation (2)</p></a>
+                        </div>
+    
+                        <div class="col-lg-3 col-md-6">
+                            
+                            <form action="">
+                                <h2>Newsletter Sign Up</h2>
+                                <p>Stay updated with latest news from Medical Press</p>
+                                <label for="name">Name:</label> <br>
+                                <input type="text" class="inp" id="name" required> <br>
+                                <label for="email">Email:</label> <br>
+                                <input type="email" class="inp" id="email" required> <br>
+        
+                                <input type="submit" class="inp1" value="Submit">
+                            </form>
+    
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-2">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-8">
+                            <div class="link rem">
+                                <a href="index.html"><li>Home</li></a>
+                                <a href="service.html"><li>Services</li></a>
+                                <a href="doctor.html"><li>Doctors</li></a>
+                                <a href="gallery.html"><li>Gallery</li></a>
+                                <a href="faq.html"><li>FAQs</li></a>
+                                <a href="news.html"><li>News</li></a>
+                                <a href="contact.html"><li>Contact</li></a>
+                            </div>
+
+                            <p>&copy; Copyright 2020. All Rights Reserved by Medical Press</p>
+                        </div>
+
+                        <div class="col-md-4">
+                            <h2 class="rem">Social</h2>
+                            <div class="social-link">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook"></i></a>
+                                <a href=""><i class="fab fa-linkedin"></i></a>
+                                <a href=""><i class="fab fa-whatsapp"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                                <a href=""><i class="fab fa-youtube"></i></a>
+                                <a href=""><i class="fab fa-skype"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- footer end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+<div class="to-top">
+    <i class="fa fa-arrow-up"></i>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

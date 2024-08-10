@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Shop - Health Medics</title>
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+
+      <!-- Stylesheets
+    ================================================== -->
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
+    <!-- Font Awesome core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon-logo.png">
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body>
+
+    <!-- header start -->
+    <header>
+        <!-- intro start -->
+        <div class="intro">
+            <div class="container">
+                
+                <div class="row">
+                    <div class="intro1 col-md-8">
+                        <div class="days">
+                            <p><i class="fas fa-clock"></i></p>
+                            <p>Opening Hours : Monday to Saturday - 8am to 9pm</p>
+                        </div>
+                    </div>
+        
+                    <div class="intro2 col-md-4">
+                        <div class="search">
+                            <input type="text" placeholder="type your search here">
+                            <span><i class="fas fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- intro end -->
+
+        <!-- navbar start -->
+        <nav class="nav">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="../images/logo.png" alt="">
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="drop"><a href="doctor.html">Doctors</a>
+
+                        <div class="drop-menu">
+                            <ul>
+                                <a href="4-columns-doctors.html"><li>4 Columns Doctors</li></a>
+                                <a href="3-columns-doctors.html"><li>3 Columns Doctors</li></a>
+                                <a href="2-columns-doctors.html"><li>2 Columns Doctors</li></a>
+                            </ul>
+                        </div>
+                    
+                    </li>
+
+                    <li><a href="news.html">News</a></li>
+
+                    <li class="drop"><a href="service.html">Services</a>
+
+                        <div class="drop-menu">
+                            <ul>
+                                <a href="3-columns-services.html"><li>3 Columns Services</li></a>
+                                <a href="2-columns-services.html"><li>2 Columns Services</li></a>
+                                <a href="1-column-services.html"><li>1 Column Services</li></a>
+                            </ul>
+                        </div>
+                    
+                    </li>
+
+                    <li class="active"><a href="shop.html">Shop</a></li>
+
+                    <li class="drop"><a href="gallery.html">Gallery</a>
+
+                        <div class="drop-menu">
+                            <ul>
+                                <a href="4-columns-gallery.html"><li>4 Columns Gallery</li></a>
+                                <a href="3-columns-gallery.html"><li>3 Columns Gallery</li></a>
+                                <a href="2-columns-gallery.html"><li>2 Columns Gallery</li></a>
+                            </ul>
+                        </div>
+                    
+                    
+                    </li>                    
+                    <li class="drop"><a href="#">Pages</a>
+
+                        <div class="drop-menu">
+                            <ul>
+                                <a href="appointment.html"><li>Appointment</li></a>
+                                <a href="faq.html"><li>Faqs</li></a>
+                                <a href="faqwidth.html"><li>Full width faqs</li></a>
+                                <a href="shortcode.html"><li>Shortcodes</li></a>
+                                <a href="columns.html"><li>Column</li></a>
+                                <a href="sample.html"><li>Sample page</li></a>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+
+                <div class="toggle-bar">
+                    <div class="toggle" id="tog1"></div>
+                    <div class="toggle" id="tog2"></div>
+                    <div class="toggle" id="tog3"></div>
+                    <div class="overlap" id="ov1" onclick="openSide()"></div>
+                    <div class="overlap1" id="ov2" onclick="closeSide()"></div>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar end -->
+
+        <!-- dark start -->
+        <div id="dark" onclick="closeSide()"></div>
+        <!-- dark end -->
+
+        <!-- Sidebar start -->
+        <div class="sidebar" id="sidebar">
+            <div class="topp">
+                <p>Monday to Saturday - 8am to 9pm</p>
+                <div class="search">
+                    <input type="text" placeholder="type your search here">
+                    <span><i class="fas fa-search"></i></span>
+                </div>
+                <h2>MENU</h2>
+            </div>
+            <ul>
+                <a href="index.html"><li>Home</li></a>
+                <div class="side-open">
+                    <div class="drop"><a href="doctor.html"><li>Doctors</li></a>
+                        <p onclick="openSideDrop()" id="onep">&plus;</p>
+                        <p onclick="closeSideDrop()" id="twop" style="display: none;">&minus;</p>
+                    </div>
+                    <div class="side-drop" id="sidedrop">
+                        <ul>
+                            <a href="4-columns-doctors.html"><li>4 Columns Doctors</li></a>
+                            <a href="3-columns-doctors.html"><li>3 Columns Doctors</li></a>
+                            <a href="2-columns-doctors.html"><li>2 Columns Doctors</li></a>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="news.html"><li>News</li></a>
+
+                <div class="side-open">
+                    <div class="drop"><a href="service.html"><li>Services</li></a>
+                        <p onclick="openSideDrop1()" id="onep1">&plus;</p>
+                        <p onclick="closeSideDrop1()" id="twop1" style="display: none;">&minus;</p>
+                    </div>
+                    <div class="side-drop" id="sidedrop1">
+                        <ul>
+                            <a href="3-columns-services.html"><li>3 Columns Services</li></a>
+                            <a href="2-columns-services.html"><li>2 Columns Services</li></a>
+                            <a href="1-column-services.html"><li>1 Column Services</li></a>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="shop.html"><li>Shop</li></a>
+
+                <div class="side-open">
+                    <div class="drop"><a href="gallery.html"><li>Gallery</li></a>
+                        <p onclick="openSideDrop2()" id="onep2">&plus;</p>
+                        <p onclick="closeSideDrop2()" id="twop2" style="display: none;">&minus;</p>
+                    </div>
+                    <div class="side-drop" id="sidedrop2">
+                        <ul>
+                            <a href="4-columns-gallery.html"><li>4 Columns Gallery</li></a>
+                            <a href="3-columns-gallery.html"><li>3 Columns Gallery</li></a>
+                            <a href="2-columns-gallery.html"><li>2 Columns Gallery</li></a>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="side-open">
+                    <div class="drop yes"><a href="#"><li>Pages</li></a>
+                        <p onclick="openSideDrop3()" id="onep3">&plus;</p>
+                        <p onclick="closeSideDrop3()" id="twop3" style="display: none;">&minus;</p>
+                    </div>
+                    <div class="side-drop" id="sidedrop3">
+                        <ul>
+                            <a href="appointment.html"><li>Appointment</li></a>
+                            <a href="faq.html"><li>Faqs</li></a>
+                            <a href="faqwidth.html"><li>Full width faqs</li></a>
+                            <a href="shortcode.html"><li>Shortcodes</li></a>
+                            <a href="columns.html"><li>Column</li></a>
+                            <a href="sample.html"><li>Sample page</li></a>
+                        </ul>
+                    </div>
+                </div>
+                
+                <a href="contact.html"><li>Contact</li></a>
+            </ul>
+        </div>
+        <!-- Sidebar end -->
+
+
+
+        
+
+        <!-- shop-1 start -->
+        <div class="shop-1">
+            <div class="container">
+                <h2>Shop</h2>       
+                <p><a href="index.html">Health Medic</a><i class="fas fa-chevron-right"></i> <span>Shop</span></p>
+            </div>
+        </div>
+        <!-- shop-1 end -->
+
+
+
+        <!-- shop-2 start -->
+        <div class="shop-2">
+            <div class="container">
+                <div class="row">
+                    
+                    <!-- col-9 start -->
+                    <div class="col-lg-9">
+                        <div class="row">
+
+                            <!-- top-head start -->
+                            <div class="col-lg-12 top-head">
+                                <p>Showing 1-12 of 17 results
+                                </p>
+
+                                <div class="wrapper">
+                                    <div class="select-btn">
+                                        <span>Default sorting</span>
+                                    </div>
+                                    <div class="content">
+                                        <div class="search">
+                                            <label for="optionSearch"><i class="fas fa-search"></i></label>
+                                            <input type="text" id="optionSearch" name="">
+                                        </div>
+                                        <ul class="options"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- top-head end -->
+
+                            <!-- col-4 start -->
+                            <div class="col-md-4">
+                                <div class="sale">
+                                    <img src="../images/album-1-300x300.jpg" class="img-responsive w-100">
+                                    <div class="price text-center">
+                                        <a href="">
+                                            <h2>Album</h2>
+                                            <p>$15.00</p>
+                                        </a>
+                                        <a href=""><button>Add to cart</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col-4 end -->
+
+                            <!-- col-4 start -->
+                            <div class="col-md-4">
+                                <div class="sale">
+                                    <img src="../images/beanie-2-300x300.jpg" class="img-responsive w-100">
+                                    <a href=""><span class="span">Sale!</span></a>
+                                    <div class="price text-center">
+                                        <a href="">
+                                            <h2>Beanie</h2>
+                                            <p><span>$20.00</span> $18.00</p>
+                                        </a>
+                                        <a href=""><button>Add to cart</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col-4 end -->
+
+                            <!-- col-4 start -->
+                            <div class="col-md-4">
+                                <div class="sale">
+                                    <img src="../images/beanie-with-logo-1-300x300.jpg" class="img-responsive w-100">
+                                    <a href=""><span class="span">Sale!</span></a>
+                                    <div class="price text-center">
+                                        <a href="">
+                                            <h2>Beanie with Logo</h2>
+                                            <p><span>$20.00</span> $18.00</p>
+                                        </a>
+                                        <a href=""><button>Add to cart</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col-4 end -->
+
+                            <!-- col-4 start -->
+                            <div class="col-md-4">
+                                <div class="sale">
+                                    <img src="../images/belt-2-300x300.jpg" class="img-responsive w-100">
+                                    <a href=""><span class="span">Sale!</span></a>
+                                    <div class="price text-center">
+                                        <a href="">
+                                            <h2>Belt</h2>
+                                            <p><span>$65.00</span> $55.00</p>
+                                        </a>
+                                        <a href=""><button>Add to cart</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col-4 end -->
+
+                            <!-- col-4 start -->
+                            <div class="col-md-4">
+                                <div class="sale">
+                                    <img src="../images/cap-2-300x300.jpg" class="img-responsive w-100">
+                                    <a href=""><span class="span">Sale!</span></a>
+                                    <div class="price text-center">
+                                        <a href="">
+                                            <h2>Cap</h2>
+                                            <p><span>$18.00</span> $16.00</p>
+                                        </a>
+                                        <a href=""><button>Add to cart</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col-4 end -->
+
+                            <!-- col-4 start -->
+                            <div class="col-md-4">
+                                <div class="sale">
+                                    <img src="../images/hoodie-2-300x300.jpg" class="img-responsive w-100">
+                                    <a href=""><span class="span">Sale!</span></a>
+                                    <div class="price text-center">
+                                        <a href="">
+                                            <h2>Hoodie</h2>
+                                            <p>$42.00 - $45.00</p>
+                                        </a>
+                                        <a href=""><button>Add to cart</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col-4 end -->
+
+                            <!-- col-4 start -->
+                            <div class="col-md-4">
+                                <div class="sale">
+                                    <img src="../images/hoodie-with-logo-2-300x300.jpg" class="img-responsive w-100">
+                                    <div class="price text-center">
+                                        <a href="">
+                                            <h2>Hoodie with Logo</h2>
+                                            <p>$45.00</p>
+                                        </a>
+                                        <a href=""><button>Add to cart</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col-4 end -->
+
+                            <!-- col-4 start -->
+                            <div class="col-md-4">
+                                <div class="sale">
+                                    <img src="../images/hoodie-with-zipper-2-300x300.jpg" class="img-responsive w-100">
+                                    <div class="price text-center">
+                                        <a href="">
+                                            <h2>Hoodie with Zipper</h2>
+                                            <p>$45.00</p>
+                                        </a>
+                                        <a href=""><button>Add to cart</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col-4 end -->
+
+                            <!-- col-4 start -->
+                            <div class="col-md-4">
+                                <div class="sale">
+                                    <img src="../images/logo-1-300x300.jpg" class="img-responsive w-100">
+                                    <a href=""><span class="span">Sale!</span></a>
+                                    <div class="price text-center">
+                                        <a href="">
+                                            <h2>Logo Collection</h2>
+                                            <p>$18.00 - $45.00</p>
+                                        </a>
+                                        <a href=""><button>Add to cart</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col-4 end -->
+
+                            <!-- col-4 start -->
+                            <div class="col-md-4">
+                                <div class="sale">
+                                    <img src="../images/long-sleeve-tee-2-300x300.jpg" class="img-responsive w-100">
+                                    <div class="price text-center">
+                                        <a href="">
+                                            <h2>Long Sleeve Tee</h2>
+                                            <p>$25.00</p>
+                                        </a>
+                                        <a href=""><button>Add to cart</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col-4 end -->
+
+                            <!-- col-4 start -->
+                            <div class="col-md-4">
+                                <div class="sale">
+                                    <img src="../images/polo-2-300x300.jpg" class="img-responsive w-100">                                    <div class="price text-center">
+                                        <a href="">
+                                            <h2>Polo</h2>
+                                            <p>$20.00</p>
+                                        </a>
+                                        <a href=""><button>Add to cart</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col-4 end -->
+
+                            <!-- col-4 start -->
+                            <div class="col-md-4">
+                                <div class="sale">
+                                    <img src="../images/single-1-300x300.jpg" class="img-responsive w-100">
+                                    <a href=""><span class="span">Sale!</span></a>
+                                    <div class="price text-center">
+                                        <a href="">
+                                            <h2>Single</h2>
+                                            <p><span>$3.00</span> $2.00</p>
+                                        </a>
+                                        <a href=""><button>Add to cart</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col-4 end -->
+                                                                               
+                        </div>
+
+                        <!-- next page start -->
+                        <div class="next-page text-center">
+                            <a href="" class="active"><li>1</li></a>
+                            <a href=""><li>2</li></a>
+                            <a href=""><li>&RightArrow;</li></a>
+                        </div>
+                        <!-- next page end -->
+
+
+                    </div>
+                    <!-- col-9 end -->
+
+                    <!-- col-3 start -->
+                    <div class="col-lg-3">
+
+                        <!-- cart start -->
+                        <div class="cart">
+                            <h2>Cart</h2>
+                            <p>No products in the cart.</p>
+                        </div>
+                        <!-- cart end -->
+
+                        <!-- product start -->
+                        <div class="product">
+                            <h2>Product categories</h2>
+                            <li><a href="">Accessories</a></li>
+                            <li><a href="">Clothing</a></li>
+                            <li class="clo"><a href="">Accessories</a></li>
+                            <li class="clo"><a href="">Hoodies</a></li>
+                            <li class="clo"><a href="">Tshirts</a></li>
+                            <li><a href="">Decor</a></li>
+                            <li><a href="">Hoodies</a></li>
+                            <li><a href="">Music</a></li>
+                            <li><a href="">Tshirts</a></li>
+                            <li><a href="">Uncategorized</a></li>
+                        </div>
+                        <!-- product end -->
+
+                         <!-- product start -->
+                         <div class="product">
+                            <h2>Top rated products</h2>
+
+                            <div class="img-list">
+                                <li>
+                                    <h6><a href="">Polo</a></h6>
+                                    <p>$20.00</p>
+                                </li>
+                                <img src="../images/polo-2-600x599.jpg" width="50px" height="50px">
+                            </div>
+
+                            <div class="img-list">
+                                <li>
+                                    <h6><a href="">Single</a></h6>
+                                    <p><span>$3.00</span> $2.00</p>
+                                </li>
+                                <img src="../images/single-1-600x600.jpg" width="50px" height="50px">
+                            </div>
+
+                            <div class="img-list">
+                                <li>
+                                    <h6><a href="">Album</a></h6>
+                                    <p>$15.00</p>
+                                </li>
+                                <img src="../images/album-1-600x600.jpg" width="50px" height="50px">
+                            </div>
+
+                            <div class="img-list">
+                                <li>
+                                    <h6><a href="">T-Shirt with Logo</a></h6>
+                                    <p>$18.00</p>
+                                </li>
+                                <img src="../images/t-shirt-with-logo-1-600x600.jpg" width="50px" height="50px">
+                            </div>
+
+                            <div class="img-list">
+                                <li>
+                                    <h6><a href="">Long Sleeve Tee</a></h6>
+                                    <p>$25.00</p>
+                                </li>
+                                <img src="../images/long-sleeve-tee-2-600x600.jpg" width="50px" height="50px">
+                            </div>
+
+                        </div>
+                        <!-- product end -->
+                        
+
+                         <!-- product start -->
+                         <div class="product">
+                            <h2>Product categories</h2>
+                            <li><a href="">Accessories</a></li>
+                            <li><a href="">Clothing</a></li>
+                            <li class="clo"><a href="">Accessories</a></li>
+                            <li class="clo"><a href="">Hoodies</a></li>
+                            <li class="clo"><a href="">Tshirts</a></li>
+                            <li><a href="">Decor</a></li>
+                            <li><a href="">Music</a></li>
+                        </div>
+                        <!-- product end -->
+                        
+                        
+
+                    </div>
+                    <!-- col-3 end -->
+
+                </div>
+            </div>
+        </div>
+        <!-- shop-2 end -->
+
+        
+
+
+
+        <!-- container-6 start -->
+        <div class="container-6">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6">
+                        <img src="../images/icon-pin-2.png">
+                        <p>121 King Street, Melbourne <br> Victoria 3000 Australia</p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <img src="../images/icon-phone-2.png">
+                        <p>Call Us Now at <br> +1-800-654-3210</p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <img src="../images/icon-mail.png">
+                        <p>Email Us at <br> info@yourwebsite.com</p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <img src="../images/icon-calendar-2.png">
+                        <a href="appointment.html"><p>Book Online <br> Appointment Now</p></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- container-6 end -->
+
+        <!-- footer start -->
+        <footer>
+
+            <div class="footer-1">
+                <div class="container">
+                    <div class="row">
+    
+                        <div class="col-lg-3 col-md-6">
+                            <h2>About MedicalPress</h2>
+                            <p>Lorem ipsum dolor sit amet, conse ctetuer adipiscing elit, sed diamno nummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <br> <br> Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                        </div>
+    
+                        <div class="col-lg-3 col-md-6">
+                            <h2>Recent Posts</h2>
+                                <a href="we-make.html"><p><i class="far fa-check-circle"></i>We make you smile each time without any pain</p></a>
+                                <a href="dental.html"><p><i class="far fa-check-circle"></i>Dental Implants are easier now</p></a>
+                                <a href="imageP.html"><p><i class="far fa-check-circle"></i>Image Post Format</p></a>
+                                <a href="quote.html"><p><i class="far fa-check-circle"></i>Quote Post Format</p></a>
+                        </div>
+    
+                        <div class="col-lg-3 col-md-6">
+                            <h2>Categories</h2>
+                             <a href="environment.html"><p><i class="far fa-check-circle"></i>Environment (2)</p></a>
+                             <a href="healthB.html"><p><i class="far fa-check-circle"></i>Health Basics (2)</p></a>
+                             <a href="lifestyle.html"><p><i class="far fa-check-circle"></i>Lifestyle (2)</p></a>
+                             <a href="motivate.html"><p><i class="far fa-check-circle"></i>Motivation (2)</p></a>
+                        </div>
+    
+                        <div class="col-lg-3 col-md-6">
+                            
+                            <form action="">
+                                <h2>Newsletter Sign Up</h2>
+                                <p>Stay updated with latest news from Medical Press</p>
+                                <label for="name">Name:</label> <br>
+                                <input type="text" class="inp" id="name" required> <br>
+                                <label for="email">Email:</label> <br>
+                                <input type="email" class="inp" id="email" required> <br>
+        
+                                <input type="submit" class="inp1" value="Submit">
+                            </form>
+    
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-2">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-8">
+                            <div class="link rem">
+                                <a href="index.html"><li>Home</li></a>
+                                <a href="service.html"><li>Services</li></a>
+                                <a href="doctor.html"><li>Doctors</li></a>
+                                <a href="gallery.html"><li>Gallery</li></a>
+                                <a href="faq.html"><li>FAQs</li></a>
+                                <a href="news.html"><li>News</li></a>
+                                <a href="contact.html"><li>Contact</li></a>
+                            </div>
+
+                            <p>&copy; Copyright 2020. All Rights Reserved by Medical Press</p>
+                        </div>
+
+                        <div class="col-md-4">
+                            <h2 class="rem">Social</h2>
+                            <div class="social-link">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook"></i></a>
+                                <a href=""><i class="fab fa-linkedin"></i></a>
+                                <a href=""><i class="fab fa-whatsapp"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                                <a href=""><i class="fab fa-youtube"></i></a>
+                                <a href=""><i class="fab fa-skype"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- footer end -->
+
+
+
+
+
+
+
+
+
+<script>
+
+
+// Shop
+
+var wrapper = document.querySelector('.wrapper');
+
+selectBtn = wrapper.querySelector('.select-btn');
+optionList = wrapper.querySelector('.options');
+searchInp = wrapper.querySelector('#optionSearch');
+
+selectBtn.addEventListener('click', ()=> {
+    wrapper.classList.toggle('activeT');
+});
+
+let optionT = ['Sort by popularity', 'Sort by average rating', 'Sort by latest', 'Sort by price: low to high', 'Sort by price: high to low'];
+
+function addOptions(selectedOption) {
+    optionList.innerHTML = '';
+    optionT.forEach (option => {
+        let isSelected = option == selectedOption ? 'selected' : '';
+        let li = `<li onclick = 'updateName(this)' class = '${isSelected}'>${option}</li>`;
+        optionList.insertAdjacentHTML('beforeend', li)
+    });
+}
+
+addOptions();
+
+function updateName(selectedLi){
+    searchInp.value = '';
+    addOptions(selectedLi.innerText);
+    wrapper.classList.remove('activeT');
+    selectBtn.firstElementChild.innerText = selectedLi.innerText;
+}
+
+searchInp.addEventListener('keyup', ()=>{
+    let arr = [];
+    let searchedVal = searchInp.value.toLowerCase();
+
+    arr = optionT.filter(data =>{
+        return data.toLowerCase().startsWith(searchedVal);
+    }).map(data => `<li onclick = 'updateName(this)'>${data}</li>`).join('');
+    optionList.innerHTML = arr ?  arr : `<p style='margin-left: 20px;'>No result found</p>`;
+})
+
+
+
+
+</script>
+
+
+
+
+
+
+
+        
+
+<div class="to-top">
+    <i class="fa fa-arrow-up"></i>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
