@@ -81,12 +81,9 @@ This project is under the [MIT License](LICENSE)
 
 ## 🧑‍💻 Author Information
 
-*   Odafe Umunnakwe
+*   Odafe Umunu
     *   [GitHub](https://github.com/odafeumunu)
-    *   [LinkedIn](https://linkedin.com/in/odafe-umunnakwe)
-*   Speed -- add your links here
-    *   [GitHub]()
-    *   [LinkedIn]()
+
 
 ## 🛡️ Badges
 
